@@ -5,6 +5,7 @@ gem 'sqlite3'  # Lightweight SQL database.
 gem 'jquery-rails'  # Connects jQuery JavaScript library to Rails.
 
 group :development, :test do
+  gem 'capybara'  # Integration test tool to simulate a user on a website.
   gem 'rspec-rails'  # Behavior Driven Development (BDD) for Rails
   gem 'factory_girl'  # Framework and DSL for test factories.
   gem 'factory_girl_rails'  # Integrates Factory Girl and Rails.

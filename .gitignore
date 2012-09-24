@@ -25,6 +25,7 @@
 /bin/htmldiff
 /bin/erubis
 /bin/ldiff
+/bin/nokogiri
 /bin/rackup
 /bin/rails
 /bin/rake
