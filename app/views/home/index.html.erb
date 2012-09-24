@@ -6,7 +6,11 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<% if @results %>
-<h1>Results for <%= @target_text %></h1>
-<%= @results.to_s.html_safe %>
+<% if @results.present? %>
+  <% @results.each_pair{|key, val| %>
+    <% if @results[key].present? %>
+      <hr><h1><%= key %> Results</h1>
+      <%= val.to_s.html_safe %>
+    <% end %>
+  <% } %>
 <% end %>

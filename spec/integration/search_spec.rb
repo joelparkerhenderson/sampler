@@ -10,17 +10,14 @@ describe "Search" do
     click_on "Search"
   end
 
-
   it "has a 'Home' headline" do
-    page.should have_xpath("//h1", :text => "Results")
+    page.should have_xpath("//h1", :text => "Home")
   end
 
-  it "has a 'Results' headline" do
-    page.should have_xpath("//h1", :text => "Results")
-  end
-
-  it "shows the search target" do
-    page.should have_content(@target)
+  it "has a results headlines" do
+    ["Google Results", "Yahoo Results"].each{|h1|
+      page.should have_xpath("//h1", :text => h1)
+    }
   end
 
 end
