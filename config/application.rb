@@ -64,5 +64,12 @@ module Sampler
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Configure generators
+    config.generators do |generator|
+      generator.test_framework :rspec, :fixture => true, :fixture_replacement => :factory_girl
+      generator.fixture_replacement :factory_girl, :dir=>"spec/factories"
+    end
+
   end
 end
