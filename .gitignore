@@ -23,6 +23,7 @@
 # Ignore vendor gems and their bin files
 /bin/autospec
 /bin/htmldiff
+/bin/httparty
 /bin/erubis
 /bin/ldiff
 /bin/nokogiri

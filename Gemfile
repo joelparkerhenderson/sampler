@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'  # Ruby On Rails, our main rapid development framework.
 gem 'sqlite3'  # Lightweight SQL database.
 gem 'jquery-rails'  # Connects jQuery JavaScript library to Rails.
+gem 'httparty'  # HTTP client library for consuming restful web services.
 
 group :development, :test do
   gem 'capybara'  # Integration test tool to simulate a user on a website.
