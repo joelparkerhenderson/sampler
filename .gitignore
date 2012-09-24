@@ -16,3 +16,22 @@
 *~
 *#
 .#*
+
+# Ignore vendor gems and their bin files
+/vendor/bundle/
+
+# Ignore vendor gems and their bin files
+/bin/erubis
+/bin/rackup
+/bin/rails
+/bin/rake
+/bin/rake2thor
+/bin/rdoc
+/bin/ri
+/bin/sass
+/bin/sass-convert
+/bin/scss
+/bin/thor
+/bin/tilt
+/bin/tt
+/vendor/bundle/
