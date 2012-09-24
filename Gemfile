@@ -5,6 +5,11 @@ gem 'sqlite3'  # Lightweight SQL database.
 gem 'jquery-rails'  # Connects jQuery JavaScript library to Rails.
 gem 'httparty'  # HTTP client library for consuming restful web services.
 
+# Queues
+gem 'amqp'
+gem 'eventmachine'
+gem 'em-http-request'
+
 group :development, :test do
   gem 'capybara'  # Integration test tool to simulate a user on a website.
   gem 'rspec-rails'  # Behavior Driven Development (BDD) for Rails
