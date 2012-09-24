@@ -1,5 +1,5 @@
 module Services
-  class Yahoo
+  class Yahoo < Base
     include HTTParty
 
     def self.search(target_text)
@@ -12,23 +12,6 @@ module Services
 
     def self.search_xpath
       "//div[@id='left']"
-    end
-
-    protected
-
-    def self.search_impl(target_url_string, options = {})
-      Rails.logger.info("search for target_url_string:#{target_url_string}")
-      html = self.get(target_url_string)
-      Rails.logger.info("search got html size:#{html ? html.size : nil}")
-      Rails.logger.info html
-      html =  Nokogiri::HTML(html)
-      if options[:at_xpath]
-        html = html.at_xpath(options[:at_xpath])
-      end
-      if options[:remove_xpath]
-        html.search(options[:remove_xpath]).remove
-      end
-      html
     end
 
   end
