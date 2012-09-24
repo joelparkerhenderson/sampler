@@ -1,0 +1,3 @@
+
+# Ignore database.yml because it will hold passwords
+/config/database.yml
