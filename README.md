@@ -1,5 +1,6 @@
 # Sampler application
 
+
 The goal of this application is to show Rails functionality.
 
 The challenege: create a RESTful API that consists of one or more resources. The API should allow the consumer to
@@ -31,24 +32,36 @@ followed by the "rails s" command. Please include documentation in your projectâ
 your API and how to use it. If specific dependencies are required on the target container to run the
 application, please include a list of those.
 
-### Sample
 
-Feel free to implement this, or any other project that satisfies the requirements above.
+## Implementation
 
-Create an API that returns some information about a given city, including things like:
 
-  * a few Google search results
+This is a quick implementation designed to show Rails functionality.
 
-  * a few tweets about the city
+  * Show the user (or REST agent) a homepage with search box.
 
-  * a weather forecast
+  * When the user (or REST agent) submits a search, show some results from Google and Yahoo.
 
-For instance, the API could take the parameters "Berkeley, CA", the request would trigger three
-independent searches on Google, Twitter, and a weather site, then the results would be aggregated and
-returned to the consumer.
+  * The results are in typical HTML, suitable for REST to follow.
 
-The diagram below shows a sample flow:
 
-  * Google and Twitter are used via synchronous API calls.
+Tradeoffs:
 
-  * the weather service is invoked asynchronously via a message queue
+  * This app uses simple HTML APIs that are web requests akin to what a browser would request.
+
+  * Future development could use similar JSON APIs, and reconstruct the HTML links.
+
+
+REST discussion:
+
+  * For REST, I use the Fielding paper.
+
+  * I agree with Fielding's position that REST APIs must be hypertext driven:
+    http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+
+  * For this sample app, HTML is the closest to REST for a quick implementation.
+
+  * If the goal is to use pre-determined JSON RPC endpoints, such as the Google Search API,
+    I would tend to describe the app design as using JSON RPC (rather than as using REST).
+    This is a valuable distinction because a true REST app is significantly more powerful
+    than JSON RPC, tends to be more challenging to develop, and needs more follow-testing.
