@@ -23,9 +23,9 @@ retrieve aggregated data from 2 or 3 sources. See sample below. Here are some of
 
   * Required: add unit and integrations tests using rspec
 
-  * Optional: add some authentication of your choice
-
   * Required technologies: Ruby on Rails, Bundler and Rspec
+
+  * Optional: add some authentication of your choice
 
 Deliver a Rails project--via Github--that runs correctly after an initial "git clone <url>"
 followed by the "rails s" command. Please include documentation in your project’s Readme describing
@@ -45,6 +45,25 @@ This is a quick implementation designed to show Rails functionality.
   * The results are in typical HTML, suitable for REST to follow.
 
 
+## Run It
+
+
+To run this app using the local webrick server:
+
+    rails s
+
+To run the AMQP asynchronous message queue:
+
+    cd script/amqp
+    bundle exec ./amqp-weather-server.rb
+
+To load the home page in any browser:
+
+    http://0.0.0.0:3000
+
+
+## Discussion
+
 Tradeoffs:
 
   * This app uses simple HTML APIs that are web requests akin to what a browser would request.
@@ -52,7 +71,7 @@ Tradeoffs:
   * Future development could use similar JSON APIs, and reconstruct the HTML links.
 
 
-REST discussion:
+REST:
 
   * For REST, I use the Fielding paper.
 

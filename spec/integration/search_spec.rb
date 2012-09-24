@@ -14,8 +14,12 @@ describe "Search" do
     page.should have_xpath("//h1", :text => "Home")
   end
 
-  it "has a results headlines" do
-    ["Google Results", "Yahoo Results"].each{|h1|
+  it "has results headlines" do
+    ["Weather Via Synchronous Results",
+     "Weather Via Asynchronous AMQP Results",
+     "Google Results",
+     "Yahoo Results"
+    ].each{|h1|
       page.should have_xpath("//h1", :text => h1)
     }
   end
