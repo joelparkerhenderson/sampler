@@ -10,4 +10,12 @@ describe Services::Google do
 
   end
 
+  describe ".search_xpath" do
+
+    it "returns the Google-specific xpath string needed to extract the best search results" do
+      expect(Services::Google.search_xpath).to eq "//div[@id='search']"
+    end
+
+  end
+
 end
