@@ -7,6 +7,6 @@
 <% end %>
 
 <% if @results %>
-<h1>Results for <%= @target %></h1>
-<%= @results %>
+<h1>Results for <%= @target_text %></h1>
+<%= @results.to_s.html_safe %>
 <% end %>
