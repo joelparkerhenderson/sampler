@@ -1,4 +1,6 @@
 Sampler::Application.routes.draw do
+  resources :items
+
   root :to => 'home#index'
   get "home/index"
 

@@ -12,6 +12,11 @@ class HomeController < ApplicationController
         "Google" => Services::Google.search(@target_text),
         "Yahoo" => Services::Yahoo.search(@target_text)
       }
+
+      # Persist some information using ActiveRecord.
+      # In a real app, we'd actually save e.g. the user id, search target, etc.
+      Item.create!
+
     end
   end
 end
